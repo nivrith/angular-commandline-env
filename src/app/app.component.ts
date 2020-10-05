@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-commandline-env';
+  public title = 'angular-commandline-env';
+
+  public readonly APP_ENV =  APP_ENV;
+
 }

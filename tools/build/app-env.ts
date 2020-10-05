@@ -20,7 +20,7 @@ declare global {
        * @description
        * Log exceptions to third party exception tracker (e.g. Sentry, Log Rocket)
        */
-      logExceptions: boolean;
+      logErrors: boolean;
 
       /**
        * @description
@@ -33,6 +33,6 @@ declare global {
 
 export const DEFAULT_APP_ENV: typeof APP_ENV = {
     runtimeChecks: true,
-    logExceptions: false,
+    logErrors: false,
     loggerUrl: 'http://localhost:3000'
   };

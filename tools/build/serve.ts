@@ -6,8 +6,7 @@ const parseNgArgs = () => process.argv.filter((arg, index) => index > 1 && Objec
 
 const ngArgs = parseNgArgs();
 
-yargs.default(DEFAULT_APP_ENV);
-const argv = yargs.argv;
+const argv = { ...DEFAULT_APP_ENV, ...yargs.argv};
 
 const childProcess = spawn('yarn', ['start', ...ngArgs], {
   stdio: 'inherit',
